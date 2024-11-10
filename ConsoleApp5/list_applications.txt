@@ -1,0 +1,2 @@
+C:\Users\Limbars\AppData\Local\Programs\Microsoft VS Code\Code.exe
+C:\Windows\system32\msinfo32.exe
