@@ -2,7 +2,10 @@
 using System;
 using System.IO;
 
-string path = @"C:\Users\Limbars\source\repos\ConsoleApp5\ConsoleApp5\list_applications.txt"; //требуется указать свой путь, у вас он может отличаться
+string directoryPath = AppDomain.CurrentDomain.BaseDirectory;
+string fileName = "list_applications.txt";
+string path = Path.Combine(directoryPath, fileName);
+
 string text = "";
 
 try
@@ -12,7 +15,6 @@ try
         text = sr.ReadToEnd(); // Читаем весь текст из файла
     }
 
-    // Разделяем текст на строки
     string[] lines = text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
     for (int i = 0; i < lines.Length; i++)
